@@ -4,7 +4,7 @@
 
 To demonstrate how to authenticate against the sipgate REST API using HTTP Basic Auth, we query the `/account` endpoint which provides basic account information.
 
-For further information regarding sipgate REST API please visit https://api.sipgate.com/v2/doc
+For further information regarding the sipgate REST API please visit https://api.sipgate.com/v2/doc
 
 
 ### Prerequisites
@@ -44,8 +44,8 @@ headers = {
     'Authorization': f'Basic {base64EncodedCredentials}'
 }
 ```
-**Note**: Basic Auth requires the credentials to be Base64-encoded.  
-**Note:** the base64 encoder requires byte-like-objects. We use `.encode('utf-8')` and `.decode('utf-8')` to convert strings to byte-like-objects and vice versa.
+**Note:** Basic Auth requires the credentials to be Base64-encoded.  
+**Note:** The base64 encoder requires byte-like-objects. We use `.encode('utf-8')` and `.decode('utf-8')` to convert strings to byte-like-objects and vice versa.
 
 ---
 
