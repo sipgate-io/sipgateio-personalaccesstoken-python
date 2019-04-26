@@ -8,7 +8,7 @@ For further information regarding the sipgate REST API please visit https://api.
 
 
 ### Prerequisites
-+ python3.6
++ python3
 + pip3
 
 ### How To Use
@@ -35,15 +35,15 @@ $ python3 main.py
 ### How It Works
 Request parameters like url and headers are defined as follows:  
 ```python
-baseURL = 'https://api.sipgate.com/v2'
+base_url = 'https://api.sipgate.com/v2'
 username = 'YOUR_SIPGATE_EMAIL'
 password = 'YOUR_SIPGATE_PASSWORD'
 
-credentials = f'{username}:{password}'.encode('utf-8')
-base64EncodedCredentials = base64.b64encode(credentials).decode('utf-8')
+credentials = (username + ':' + password).encode('utf-8')
+base64_encoded_credentials = base64.b64encode(credentials).decode('utf-8')
 
 headers = {
-    'Authorization': f'Basic {base64EncodedCredentials}'
+    'Authorization': 'Basic ' + base64_encoded_credentials
 }
 ```
 **Note:** Basic Auth requires the credentials to be Base64-encoded.  
@@ -55,10 +55,10 @@ We use the python package 'requests' for request generation and execution.
 The requested URL consists of the base url defined above and the endpoint `/account`.
 This example prints the status code and response body to the console.
 ```python
-response = requests.get(f'{baseURL}/account', headers=headers)
+response = requests.get(base_url + '/account', headers=headers)
 
-print(f'Status: {response.status_code}')
-print(f'Body: {response.content.decode("utf-8")}')
+print('Status:', response.status_code)
+print('Body:', response.content.decode("utf-8"))
 ```
 
 ### Basic Auth
@@ -76,7 +76,6 @@ The Base64-encoded string would be `Sm9objp0b3BzZWNyZXQ=`.
 The complete header would look like:
 
 `Authorization: Basic Sm9objp0b3BzZWNyZXQ=`
-
 
 
 ### Common Issues
