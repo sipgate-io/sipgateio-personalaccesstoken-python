@@ -2,23 +2,23 @@ import base64
 import requests
 
 
-def main():
-    baseURL = 'https://api.sipgate.com/v2'
+def basic_auth():
+    base_url = 'https://api.sipgate.com/v2'
     username = 'YOUR_SIPGATE_EMAIL'
     password = 'YOUR_SIPGATE_PASSWORD'
 
-    credentials = f'{username}:{password}'.encode('utf-8')
-    base64EncodedCredentials = base64.b64encode(credentials).decode('utf-8')
+    credentials = (username + ':' + password).encode('utf-8')
+    base64_encoded_credentials = base64.b64encode(credentials).decode('utf-8')
 
     headers = {
-        'Authorization': f'Basic {base64EncodedCredentials}'
+        'Authorization': 'Basic ' + base64_encoded_credentials
     }
 
-    response = requests.get(f'{baseURL}/account', headers=headers)
+    response = requests.get(base_url + '/account', headers=headers)
 
-    print(f'Status: {response.status_code}')
-    print(f'Body: {response.content.decode("utf-8")}')
+    print('Status:', response.status_code)
+    print('Body:', response.content.decode("utf-8"))
 
 
 if __name__ == "__main__":
-    main()
+    basic_auth()
