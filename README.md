@@ -20,7 +20,7 @@ Install dependencies:
 $ pip3 install -r requirements.txt
 ```
 
-Change username and password in main.py:
+Change username and password in [basicauth.py](./basicauth.py):
 ```python
 username = 'YOUR_SIPGATE_EMAIL'
 password = 'YOUR_SIPGATE_PASSWORD'
@@ -28,7 +28,7 @@ password = 'YOUR_SIPGATE_PASSWORD'
 
 Run the application:
 ```bash
-$ python3 main.py
+$ python3 basicauth.py
 ```
 
 
