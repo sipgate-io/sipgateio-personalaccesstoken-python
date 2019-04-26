@@ -16,7 +16,7 @@ setup(
     long_description=readme,
     author='sipgate',
     author_email='',
-    url='',
+    url='https://github.com/sipgate-io/sipgateio-basicauth-python',
     license=license,
     packages=find_packages(exclude=())
 )
