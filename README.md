@@ -49,6 +49,8 @@ headers = {
 **Note:** Basic Auth requires the credentials to be Base64-encoded.  
 **Note:** The base64 encoder requires byte-like-objects. We use `.encode('utf-8')` and `.decode('utf-8')` to convert strings to byte-like-objects and vice versa.
 
+> If OAuth should be used for `Authorization` instead of Basic Auth we do not suply the auth object in the request options. Instead we set the authorization header to `Bearer` followed by a space and the access token: ```Authorization: `Bearer ${accessToken}`,```. For an example application interacting with the sipgate API using OAuth see our [sipgate.io python OAuth example](https://github.com/sipgate-io/sipgateio-oauth-python).
+
 ---
 
 We use the python package 'requests' for request generation and execution.
