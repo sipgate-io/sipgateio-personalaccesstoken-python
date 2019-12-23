@@ -12,7 +12,7 @@ with open('LICENSE') as f:
 setup(
     name='sipgateio-basicauth-python',
     version='0.1.0',
-    description='short example for basic auth in python',
+    description='A demonstration on how to authenticate yourself against the sipgate REST API using HTTP Basic Auth',
     long_description=readme,
     author='sipgate',
     author_email='',
