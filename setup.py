@@ -14,8 +14,8 @@ setup(
     version='0.1.0',
     description='A demonstration on how to authenticate yourself against the sipgate REST API using HTTP Basic Auth',
     long_description=readme,
-    author='sipgate',
-    author_email='',
+    author='sipgate.io Team',
+    author_email='io-team@sipgate',
     url='https://github.com/sipgate-io/sipgateio-basicauth-python',
     license=license,
     packages=find_packages(exclude=())
