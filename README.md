@@ -30,6 +30,8 @@ token_id = 'YOUR_SIPGATE_TOKEN_ID'
 token = 'YOUR_SIPGATE_TOKEN'
 ```
 
+The token should have the `account:read` scope. For more information about personal access tokens visit https://www.sipgate.io/rest-api/authentication#personalAccessToken.
+
 Run the application:
 
 ```bash
