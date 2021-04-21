@@ -2,12 +2,12 @@ import base64
 import requests
 
 
-def basic_auth():
+def personal_access_token():
     base_url = 'https://api.sipgate.com/v2'
-    username = 'YOUR_SIPGATE_EMAIL'
-    password = 'YOUR_SIPGATE_PASSWORD'
+    token_id = 'YOUR_SIPGATE_TOKEN_ID'
+    token = 'YOUR_SIPGATE_TOKEN'
 
-    credentials = (username + ':' + password).encode('utf-8')
+    credentials = (token_id + ':' + token).encode('utf-8')
     base64_encoded_credentials = base64.b64encode(credentials).decode('utf-8')
 
     headers = {
@@ -21,4 +21,4 @@ def basic_auth():
 
 
 if __name__ == "__main__":
-    basic_auth()
+    personal_access_token()
