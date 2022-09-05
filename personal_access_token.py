@@ -1,11 +1,18 @@
 import base64
 import requests
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
+import requests
+
+load_dotenv()
+
+token = os.environ.get("token")
+token_id = os.environ.get("tokenId")
 
 
 def personal_access_token():
     base_url = 'https://api.sipgate.com/v2'
-    token_id = 'YOUR_SIPGATE_TOKEN_ID'
-    token = 'YOUR_SIPGATE_TOKEN'
 
     credentials = (token_id + ':' + token).encode('utf-8')
     base64_encoded_credentials = base64.b64encode(credentials).decode('utf-8')

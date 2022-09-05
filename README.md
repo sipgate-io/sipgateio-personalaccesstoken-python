@@ -23,12 +23,7 @@ Install dependencies:
 $ pip3 install -r requirements.txt
 ```
 
-Change token_id and token in [personal_access_token.py](./personal_access_token.py):
-
-```python
-token_id = 'YOUR_SIPGATE_TOKEN_ID'
-token = 'YOUR_SIPGATE_TOKEN'
-```
+Create the `.env` file by copying the `.env.example`. Set the values according to the comment above each variable.
 
 The token should have the `account:read` scope. For more information about personal access tokens visit https://www.sipgate.io/rest-api/authentication#personalAccessToken.
 
