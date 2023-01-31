@@ -7,8 +7,8 @@ import requests
 
 load_dotenv()
 
-token = os.environ.get("token")
-token_id = os.environ.get("tokenId")
+token = os.environ.get("TOKEN")
+token_id = os.environ.get("TOKEN_ID")
 
 
 def personal_access_token():
